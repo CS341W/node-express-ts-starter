@@ -1,24 +1,24 @@
-import {JSONFileSyncPreset} from 'lowdb/node'
-import {Animal, Database} from './types.js'
+import { JSONFileSyncPreset } from "lowdb/node"
+import { Animal, Database } from "./types.js"
 
 const initialData: Database = {
   animals: [
     {
-      name: 'Dog',
-      family: 'mammal',
+      name: "Dog",
+      family: "mammal",
     },
     {
-      name: 'Cat',
-      family: 'mammal',
+      name: "Cat",
+      family: "mammal",
     },
     {
-      name: 'Snake',
-      family: 'reptile',
-    }
-  ]
+      name: "Snake",
+      family: "reptile",
+    },
+  ],
 }
 
-const db = JSONFileSyncPreset('db.json', initialData)
+const db = JSONFileSyncPreset("db.json", initialData)
 
 export const database = {
   animals: {
@@ -31,14 +31,14 @@ export const database = {
       db.write()
     },
     remove(name: string) {
-      const index = db.data.animals.findIndex(animal => animal.name === name)
+      const index = db.data.animals.findIndex((animal) => animal.name === name)
       db.data.animals.splice(index, 1)
       db.write()
     },
     favorite(name: string) {
-      const index = db.data.animals.findIndex(animal => animal.name === name)
+      const index = db.data.animals.findIndex((animal) => animal.name === name)
       db.data.animals[index].isFavorite = !db.data.animals[index].isFavorite
       db.write()
-    }
+    },
   },
 }

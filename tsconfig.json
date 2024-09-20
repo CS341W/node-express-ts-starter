@@ -9,6 +9,6 @@
     "skipLibCheck": true,
     "outDir": "lib"
   },
-  "include": ["lib/types.ts", "lib/server.ts"],
+  "include": ["src/types.ts", "src/server.ts"],
   "exclude": ["node_modules"]
 }

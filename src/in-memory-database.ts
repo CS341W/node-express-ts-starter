@@ -1,20 +1,20 @@
-import {Animal, Database} from "./types.js"
+import { Animal, Database } from "./types.js"
 
 const data: Database = {
   animals: [
     {
-      name: 'Dog',
-      family: 'mammal',
+      name: "Dog",
+      family: "mammal",
     },
     {
-      name: 'Cat',
-      family: 'mammal',
+      name: "Cat",
+      family: "mammal",
     },
     {
-      name: 'Snake',
-      family: 'reptile',
-    }
-  ]
+      name: "Snake",
+      family: "reptile",
+    },
+  ],
 }
 
 export const database = {
@@ -26,12 +26,12 @@ export const database = {
       data.animals.push(animal)
     },
     remove(name: string) {
-      const index = data.animals.findIndex(animal => animal.name === name)
+      const index = data.animals.findIndex((animal) => animal.name === name)
       data.animals.splice(index, 1)
     },
     favorite(name: string) {
-      const index = data.animals.findIndex(animal => animal.name === name)
+      const index = data.animals.findIndex((animal) => animal.name === name)
       data.animals[index].isFavorite = !data.animals[index].isFavorite
-    }
+    },
   },
 }

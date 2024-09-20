@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node lib/server.js",
     "build": "tsc",
-    "dev": "tsx watch lib/server.ts"
+    "dev": "tsx watch src/server.ts"
   },
   "dependencies": {
     "express": "^4.19.2",
